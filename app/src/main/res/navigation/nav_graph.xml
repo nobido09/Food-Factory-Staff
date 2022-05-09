@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="com.example.foodfactorystaff.ui.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_MenuFragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SubMenuFragment"
+        android:name="com.example.foodfactorystaff.ui.SubMenuFragment"
+        android:label="SubMenuFragment"
+        tools:layout="@layout/fragment_sub_menu" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_SubMenuFragment_to_editDishFragment"
+            app:destination="@id/editDishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDishFragment"
+        android:name="com.example.foodfactorystaff.ui.EditDishFragment"
+        android:label="fragment_edit_dish"
+        tools:layout="@layout/fragment_edit_dish" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cashPayment"
+        android:name="com.example.foodfactorystaff.ui.CashPayment"
+        android:label="CashPayment" />
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.foodfactorystaff.ui.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/action_home2_to_cashPayment"
+            app:destination="@id/cashPayment" />
+        <action
+            android:id="@+id/action_home2_to_orderList"
+            app:destination="@id/orderList" />
+        <action
+            android:id="@+id/action_home2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderList"
+        android:name="com.example.foodfactorystaff.ui.OrderList"
+        android:label="OrderList" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.foodfactorystaff.ui.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_loginFragment_to_chefFragment"
+            app:destination="@id/chefFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chefFragment"
+        android:name="com.example.foodfactorystaff.ui.ChefFragment"
+        android:label="ChefFragment" >
+        <action
+            android:id="@+id/action_chefFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

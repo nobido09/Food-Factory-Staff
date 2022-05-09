@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@drawable/outer"
+    android:elevation="18dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textChefOrderID"
+        android:layout_width="223dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="10dp"
+        android:text="Order ID"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textChefUserID"
+        app:layout_constraintEnd_toStartOf="@+id/iconEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textChefUserID"
+        android:layout_width="189dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="255dp"
+        android:layout_marginBottom="8dp"
+        android:text="User ID"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textPaymentMethod"
+        app:layout_constraintEnd_toStartOf="@+id/iconEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textChefOrderID" />
+
+    <TextView
+        android:id="@+id/textPaymentMethod"
+        android:layout_width="194dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="184dp"
+        android:text="Payment Method"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textAmount"
+        app:layout_constraintEnd_toStartOf="@+id/iconEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textChefUserID" />
+
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_width="151dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="8dp"
+        android:text="Amount"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textDateTime"
+        app:layout_constraintEnd_toStartOf="@+id/iconEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPaymentMethod" />
+
+
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="207dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="284dp"
+        android:text="DateTime"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAmount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iconEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="103dp"
+
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="27dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

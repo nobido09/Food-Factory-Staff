@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/grad">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="74dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="18dp"
+        android:src="@drawable/ic_baseline_restaurant_menu_24"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textMenu"
+        app:layout_constraintEnd_toStartOf="@+id/textMenu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textMenu"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="209dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:text="Menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/GoogleTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textPayment"
+        app:layout_constraintEnd_toStartOf="@+id/imgNextMenu"
+        app:layout_constraintStart_toEndOf="@+id/imgMenu" />
+
+    <ImageView
+        android:id="@+id/imgNextMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textMenu"
+        app:layout_constraintTop_toTopOf="@+id/textMenu"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPayment"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="18dp"
+        android:src="@drawable/ic_baseline_payments_24"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textPayment"
+        app:layout_constraintEnd_toStartOf="@+id/textPayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textPayment"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPayment2"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="18dp"
+        android:src="@drawable/ic_baseline_food_bank_24"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textPayment2"
+        app:layout_constraintEnd_toStartOf="@+id/textPayment2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textPayment2" />
+
+    <TextView
+        android:id="@+id/textPayment"
+        android:layout_width="209dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/croissantone_regular"
+        android:gravity="center"
+        android:text="Payment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/GoogleTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgNextPayment"
+        app:layout_constraintStart_toEndOf="@+id/imgPayment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <TextView
+        android:id="@+id/textPayment2"
+        android:layout_width="209dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+
+        android:layout_marginBottom="259dp"
+        android:fontFamily="@font/croissantone_regular"
+        android:gravity="center"
+        android:text="Orders"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/GoogleTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgNextOrder"
+        app:layout_constraintStart_toEndOf="@+id/imgPayment2"
+        app:layout_constraintTop_toBottomOf="@+id/textPayment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgNextOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textPayment2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textPayment2"
+        app:layout_constraintTop_toTopOf="@+id/textPayment2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    <ImageView
+        android:id="@+id/imgNextPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textPayment"
+        app:layout_constraintTop_toTopOf="@+id/textPayment"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Logout"
+        app:icon="@drawable/ic_outline_cancel_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

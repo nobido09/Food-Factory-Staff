@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/frame_1"
+    android:layout_margin="16dp"
+    android:background="@drawable/round_rect_shape"
+    android:elevation="18dp">
+
+
+    <TextView
+        android:id="@+id/textCategory"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/croissantone_regular"
+        android:gravity="center_horizontal|top"
+        android:text="tomato_vegg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/GoogleTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgCrossMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="the not very tasty salad everyone wants" />
+
+    <ImageView
+        android:id="@+id/imgCheckMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="#ffffff"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_24" />
+
+    <ImageView
+        android:id="@+id/imgCrossMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgCheckMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_outline_cancel_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
